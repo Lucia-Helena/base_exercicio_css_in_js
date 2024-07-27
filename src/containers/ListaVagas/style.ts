@@ -1,33 +1,15 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
-export const EstiloGlobal = createGlobalStyle`
-:root {
-   --cor-principal: #a7727d;
-  --cor-secundaria: #f9f5e7;
- }
+const Lista = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+  margin-top: 32px;
 
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Lato, sans-serif;
-    list-style: none;
-  }
-
-  body {
-  padding-bottom: 120px;
-}
-
-`
-
-export default EstiloGlobal
-
-export const Container = styled.div`
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-
-  @media (max-width: 1024px) {
-    max-width: 80%;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 `
+
+export default Lista
